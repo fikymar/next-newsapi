@@ -1,16 +1,76 @@
+:root {
+	--primary: rgb(223, 174, 193);
+	--secondary: rgb(42, 218, 209);
+	--terciary: rgb(84, 207, 84);
+	--gray: #636567;
+	--light: #fefefe;
+	--dark: darkslategrey;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	color: var(--light);
+	background: var(--dark);
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-size: 48px;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--secondary);
+	text-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+	display: flex;
+	justify-content: space-evenly;
+	background: var(--gray);
+	line-height: 2;
+	padding: 1rem 2rem;
+}
+
+/*nav*/
+nav a {
+	color: var(--primary);
+	font-weight: 700;
+	font-size: 1.5rem;
+	border-bottom: 5px solid transparent;
+	transition: border-bottom 0.5s ease-in-out;
+}
+
+nav a:hover {
+	border-bottom: 5px solid var(--light);
+}
+
+/*footer*/
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 70%;
+	height: 100px;
+	margin: 0 auto;
+	border-top: 5px solid var(--primary);
+	font-size: 0.8rem;
+	color: var(--light);
+}
+
+footer a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
 }
