@@ -1,5 +1,5 @@
 .container {
-	max-width: 60%;
+	width: clamp(300px, 80%, 1000px);
 	margin: auto;
 	padding: 1rem 0;
 	border-bottom: 5px solid grey;
