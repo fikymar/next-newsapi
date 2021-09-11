@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const baseUrl = `https://newsapi.org/v2/top-headlines?country=cz&category=technology&apiKey=946c14c2bc5245b3ac16efd9c46f6dbf`;
 
-export const getStaticProps = async ({ value, category }) => {
+export const getStaticProps = async () => {
 	const res = await fetch(baseUrl);
 
 	console.log(res);
@@ -14,6 +14,7 @@ export const getStaticProps = async ({ value, category }) => {
 		props: {
 			articles: data.articles,
 		},
+		unstable_revalidate: 1,
 	};
 };
 

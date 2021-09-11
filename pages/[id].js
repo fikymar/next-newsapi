@@ -14,7 +14,7 @@ export const getStaticPaths = async () => {
 
 	return {
 		paths,
-		fallback: false,
+		fallback: blocking,
 	};
 };
 
@@ -27,6 +27,7 @@ export const getStaticProps = async (context) => {
 		props: {
 			article: data.articles[id],
 		},
+		unstable_revalidate: 1,
 	};
 };
 
